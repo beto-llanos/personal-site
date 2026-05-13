@@ -13,7 +13,7 @@ export function Skills() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-14">
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-            04 · Stack
+            06 · Stack
           </div>
           <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl">
             What I work with

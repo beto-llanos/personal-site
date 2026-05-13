@@ -17,7 +17,7 @@ export const hero = {
   greeting: "Hi, I'm Roberto.",
   headline: "Building things on the internet until one changes my life.",
   subhead:
-    "Python automation developer. I help businesses automate repetitive tasks with web scraping, API integration, and data pipelines — and ship indie AI experiments on the side.",
+    "I build automation systems that save businesses hours of manual work — from web scraping and API integrations to AI-powered workflows.",
   ctas: [
     { label: "View projects", href: "#projects", variant: "primary" as const },
     { label: "Get in touch", href: "#contact", variant: "ghost" as const },
@@ -80,60 +80,99 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Web Scraping Toolkit",
-    what: "A collection of scrapers I've built for clients — handles JS rendering, anti-bot, retries, and clean data export.",
-    why: "Every business has data trapped in someone else's UI. I free it.",
-    stack: ["Python", "Playwright", "BeautifulSoup"],
-    status: "shipped",
-    href: "#contact",
-    accent: "violet",
-  },
-  {
-    title: "API Integration Engine",
-    what: "Reusable framework to glue together third-party APIs (CRMs, ads, payments) into a single source of truth.",
-    why: "Most 'automation' problems are really integration problems.",
-    stack: ["Python", "FastAPI", "Postgres"],
-    status: "shipped",
-    href: "#contact",
-    accent: "pink",
-  },
-  {
     title: "AI KPI Debugger",
     what: "Compares advertising metrics across platforms and surfaces reporting mismatches in real time.",
     why: "Built to understand cross-source analytics discrepancies that quietly waste ad budget.",
     stack: ["Python", "SQL", "APIs"],
     status: "building",
     href: "#contact",
-    accent: "orange",
+    accent: "violet",
   },
   {
     title: "AI Agent Experiments",
-    what: "Small vertical agents that complete real tasks end-to-end — research, data entry, follow-ups.",
+    what: "Small vertical agents that try to complete real tasks end-to-end — research, data entry, follow-ups.",
     why: "Learning what LLMs can actually do in production, outside the demo bubble.",
     stack: ["Python", "OpenAI", "LangChain"],
     status: "building",
     href: "#contact",
-    accent: "cyan",
+    accent: "pink",
   },
   {
-    title: "Hackathon Build — Google Cloud",
-    what: "AI + cloud-native prototype currently in development for the upcoming Google Cloud hackathon.",
+    title: "Google Cloud Hackathon Build",
+    what: "AI + cloud-native prototype in development for an upcoming Google Cloud hackathon.",
     why: "Pressure-test what I can ship in a weekend with real infra.",
     stack: ["Google Cloud", "Python", "AI"],
     status: "building",
     href: "#contact",
-    accent: "lime",
+    accent: "orange",
+  },
+  {
+    title: "Startup Prototype — TBA",
+    what: "Early concept exploring how small teams replace internal busywork with AI.",
+    why: "Validating the problem with real users before writing the second line of code.",
+    stack: ["Research", "Prototype"],
+    status: "concept",
+    href: "#contact",
+    accent: "cyan",
+  },
+];
+
+export type ClientCase = {
+  title: string;
+  what: string;
+  outcome: string;
+  stack: string[];
+  accent: Project["accent"];
+};
+
+export const clientWork: ClientCase[] = [
+  {
+    title: "Web scraping systems",
+    what: "Scrapers built for clients — handle JS rendering, anti-bot patterns, retries, and clean data export to wherever they need it.",
+    outcome: "Replace hours of manual data collection per week with one cron job.",
+    stack: ["Python", "Playwright", "BeautifulSoup"],
+    accent: "violet",
+  },
+  {
+    title: "API integration systems",
+    what: "Small Python services that connect third-party APIs (CRMs, ads platforms, payments) so the rest of a client's stack sees one consistent interface.",
+    outcome: "Stop juggling 4 dashboards. One source of truth, updated automatically.",
+    stack: ["Python", "FastAPI", "Postgres"],
+    accent: "pink",
   },
   {
     title: "Your repetitive task",
-    what: "Got a manual workflow that eats hours every week? Let's automate it.",
-    why: "Most of my best work started as someone saying 'I do this every day and it's killing me.'",
-    stack: ["Open"],
-    status: "concept",
-    href: "#contact",
-    accent: "violet",
+    what: "Got a manual workflow that eats hours every week? Let's see if it's automatable — usually it is.",
+    outcome: "Free your team to do work only humans can do.",
+    stack: ["Discovery call"],
+    accent: "orange",
   },
 ];
+
+export const notes = {
+  eyebrow: "Notes",
+  title: "Half-baked thoughts",
+  intro:
+    "Things I keep noticing while building. Not essays — more like sticky notes I'd write to past-me.",
+  items: [
+    {
+      tag: "Automation",
+      text: "Most automation problems are really data problems. Get the data clean and 80% of the 'AI magic' becomes a SQL query.",
+    },
+    {
+      tag: "AI agents",
+      text: "Agents in real workflows don't fail at reasoning. They fail at not knowing when to stop.",
+    },
+    {
+      tag: "Shipping",
+      text: "Speed comes from picking smaller problems, not working faster on huge ones.",
+    },
+    {
+      tag: "Indie",
+      text: "Building in public is mostly building anyway. The 'public' part is a forcing function for finishing.",
+    },
+  ],
+};
 
 export const skills = [
   {

@@ -4,6 +4,8 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Now } from "@/components/Now";
 import { Projects } from "@/components/Projects";
+import { ClientWork } from "@/components/ClientWork";
+import { Notes } from "@/components/Notes";
 import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
 import { Goal } from "@/components/Goal";
@@ -20,6 +22,8 @@ export default function Page() {
         <About />
         <Now />
         <Projects />
+        <ClientWork />
+        <Notes />
         <Skills />
         <Experience />
         <Goal />

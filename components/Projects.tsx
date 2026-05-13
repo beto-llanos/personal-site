@@ -29,21 +29,23 @@ export function Projects() {
         <div className="mb-14 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-              03 · Work
+              03 · Projects
             </div>
             <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl">
-              Things I've built (and am building)
+              What I build for myself
             </h2>
             <p className="mt-3 max-w-xl text-[var(--color-ink-soft)]">
-              Experiments, hackathon prototypes, and tools I made for myself
-              that turned out useful for others too.
+              Personal experiments, hackathon prototypes, and AI projects I
+              ship to learn. Code lives on GitHub.
             </p>
           </div>
           <a
-            href="#contact"
+            href="https://github.com/beto-llanos"
+            target="_blank"
+            rel="noreferrer noopener"
             className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white"
           >
-            Want to build together?
+            See on GitHub
             <span aria-hidden>→</span>
           </a>
         </div>

@@ -6,9 +6,10 @@ import { site } from "@/lib/content";
 const links = [
   { label: "About", href: "#about" },
   { label: "Now", href: "#now" },
-  { label: "Work", href: "#projects" },
+  { label: "Projects", href: "#projects" },
+  { label: "Client work", href: "#client-work" },
+  { label: "Notes", href: "#notes" },
   { label: "Stack", href: "#skills" },
-  { label: "Journey", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -58,12 +59,6 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a
-              href="#contact"
-              className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition hover:scale-[1.02] hover:bg-white/90 md:inline-block"
-            >
-              Work with me
-            </a>
             <button
               aria-label="Toggle menu"
               onClick={() => setOpen((v) => !v)}
@@ -105,13 +100,6 @@ export function Nav() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="mt-1 rounded-xl bg-white px-3 py-2 text-center text-sm font-semibold text-black"
-            >
-              Work with me
-            </a>
           </div>
         </div>
       )}
