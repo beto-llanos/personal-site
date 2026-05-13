@@ -17,15 +17,21 @@ export function Notes() {
         </div>
 
         <ul className="grid gap-3 sm:grid-cols-2">
-          {notes.items.map((n) => (
+          {notes.items.map((n, i) => (
             <li
               key={n.text}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-6 transition hover:border-white/20"
+              className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-6 transition hover:border-white/20 ${
+                i === 0 ? "sm:col-span-2" : ""
+              }`}
             >
               <div className="font-mono text-[10px] uppercase tracking-widest text-white/40">
                 #{n.tag.toLowerCase().replace(/\s+/g, "-")}
               </div>
-              <p className="mt-3 text-base leading-relaxed text-white/85">
+              <p
+                className={`mt-3 leading-relaxed text-white/85 ${
+                  i === 0 ? "text-lg" : "text-base"
+                }`}
+              >
                 {n.text}
               </p>
             </li>

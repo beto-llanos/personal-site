@@ -262,8 +262,12 @@ export const notes = {
     "Things I keep noticing while building. Not essays — more like sticky notes I'd write to past-me.",
   items: [
     {
+      tag: "Lesson",
+      text: "At a hackathon earlier this year, reviewers called my AI finance assistant \"just a wrapper.\" They were right. Helix — where the memory layer IS the product — is what came out of that critique.",
+    },
+    {
       tag: "Automation",
-      text: "Most automation problems are really data problems. Get the data clean and 80% of the 'AI magic' becomes a SQL query.",
+      text: "Most automation problems are really data problems. Get the data clean and 80% of the \"AI magic\" becomes a SQL query.",
     },
     {
       tag: "AI agents",
@@ -275,7 +279,7 @@ export const notes = {
     },
     {
       tag: "Indie",
-      text: "Building in public is mostly building anyway. The 'public' part is a forcing function for finishing.",
+      text: "Building in public is mostly building anyway. The \"public\" part is a forcing function for finishing.",
     },
   ],
 };
