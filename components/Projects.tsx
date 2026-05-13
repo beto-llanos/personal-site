@@ -1,4 +1,5 @@
 import { projects, type Project } from "@/lib/content";
+import { Preview } from "@/components/Preview";
 
 const accentMap: Record<Project["accent"], string> = {
   violet: "from-violet-500/40 to-violet-500/0",
@@ -85,6 +86,12 @@ export function Projects() {
               <p className="relative mt-3 border-l-2 border-white/10 pl-3 text-sm italic leading-relaxed text-white/50">
                 {p.why}
               </p>
+
+              {p.preview && (
+                <div className="relative mt-5">
+                  <Preview data={p.preview} />
+                </div>
+              )}
 
               <div className="relative mt-auto pt-6 flex flex-wrap gap-1.5">
                 {p.stack.map((t) => (

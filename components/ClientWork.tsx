@@ -1,4 +1,5 @@
 import { clientWork } from "@/lib/content";
+import { Preview } from "@/components/Preview";
 
 const accentMap = {
   violet: "from-violet-500/30 to-transparent",
@@ -86,6 +87,7 @@ export function ClientWork() {
                     </span>
                     {c.outcome}
                   </p>
+                  {c.preview && <Preview data={c.preview} />}
                 </div>
               </div>
             </div>

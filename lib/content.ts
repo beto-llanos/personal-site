@@ -68,6 +68,8 @@ export const now = {
   lastUpdated: "May 2026",
 };
 
+import type { PreviewData } from "@/components/Preview";
+
 export type Project = {
   title: string;
   what: string;
@@ -76,6 +78,7 @@ export type Project = {
   status: "shipped" | "building" | "concept";
   href?: string;
   accent: "violet" | "pink" | "orange" | "cyan" | "lime";
+  preview?: PreviewData;
 };
 
 export const projects: Project[] = [
@@ -87,6 +90,18 @@ export const projects: Project[] = [
     status: "building",
     href: "#contact",
     accent: "violet",
+    preview: {
+      type: "terminal",
+      title: "kpi-debug · output",
+      lines: [
+        { kind: "prompt", text: "python debug.py --campaign Q2" },
+        { kind: "dim", text: "[Meta]    spend: $4,210.00  clicks: 12,840" },
+        { kind: "dim", text: "[GA4]     spend: $4,210.00  clicks: 11,902" },
+        { kind: "warn", text: "Δ clicks 938 (7.3%) — attribution gap" },
+        { kind: "out", text: "  ↳ likely cause: cross-device, last-touch" },
+        { kind: "ok", text: "OK · 14/15 sources reconciled" },
+      ],
+    },
   },
   {
     title: "AI Agent Experiments",
@@ -96,6 +111,18 @@ export const projects: Project[] = [
     status: "building",
     href: "#contact",
     accent: "pink",
+    preview: {
+      type: "terminal",
+      title: "agent.run · trace",
+      lines: [
+        { kind: "prompt", text: "agent run \"qualify inbound lead\"" },
+        { kind: "kw", text: "› step 1  fetch_company(domain)" },
+        { kind: "out", text: "  industry=SaaS · headcount~40 · funded" },
+        { kind: "kw", text: "› step 2  score_fit(criteria)" },
+        { kind: "out", text: "  fit=0.78  signal: hiring eng manager" },
+        { kind: "ok", text: "✓ handoff: routed to founder · 41s" },
+      ],
+    },
   },
   {
     title: "Google Cloud Hackathon Build",
@@ -105,6 +132,18 @@ export const projects: Project[] = [
     status: "building",
     href: "#contact",
     accent: "orange",
+    preview: {
+      type: "terminal",
+      title: "deploy.sh",
+      lines: [
+        { kind: "prompt", text: "gcloud run deploy agent-svc --region us-central1" },
+        { kind: "dim", text: "Building image · 6.2 MB" },
+        { kind: "dim", text: "Pushing to Artifact Registry…" },
+        { kind: "ok", text: "✓ Revision agent-svc-00007-x9k serving 100%" },
+        { kind: "out", text: "  URL: https://agent-svc-xxxxx.a.run.app" },
+        { kind: "kw", text: "› cold start: 480ms · p95: 1.2s" },
+      ],
+    },
   },
   {
     title: "Startup Prototype — TBA",
@@ -114,6 +153,18 @@ export const projects: Project[] = [
     status: "concept",
     href: "#contact",
     accent: "cyan",
+    preview: {
+      type: "terminal",
+      title: "validate.md",
+      lines: [
+        { kind: "kw", text: "# problem interviews — week 2" },
+        { kind: "out", text: "interviews_done       12" },
+        { kind: "out", text: "pain_confirmed        9 / 12" },
+        { kind: "out", text: "would_pay (verbal)    6 / 12" },
+        { kind: "warn", text: "→ narrowing ICP before building" },
+        { kind: "dim", text: "next: 5 more calls, then prototype" },
+      ],
+    },
   },
 ];
 
@@ -123,6 +174,7 @@ export type ClientCase = {
   outcome: string;
   stack: string[];
   accent: Project["accent"];
+  preview?: PreviewData;
 };
 
 export const clientWork: ClientCase[] = [
@@ -132,6 +184,18 @@ export const clientWork: ClientCase[] = [
     outcome: "Replace hours of manual data collection per week with one cron job.",
     stack: ["Python", "Playwright", "BeautifulSoup"],
     accent: "violet",
+    preview: {
+      type: "terminal",
+      title: "scrape.py · run",
+      lines: [
+        { kind: "prompt", text: "python scrape.py --site marketplace --pages 1200" },
+        { kind: "dim", text: "rotating proxies… 24 healthy" },
+        { kind: "out", text: "page 0742/1200  ·  rate 8.4/s  ·  retries 11" },
+        { kind: "warn", text: "⚠ challenge page detected — backing off 12s" },
+        { kind: "ok", text: "✓ done · 1,200 pages · 38,914 rows" },
+        { kind: "kw", text: "→ exported to s3://client/raw/2026-05-12.csv" },
+      ],
+    },
   },
   {
     title: "API integration systems",
@@ -139,6 +203,21 @@ export const clientWork: ClientCase[] = [
     outcome: "Stop juggling 4 dashboards. One source of truth, updated automatically.",
     stack: ["Python", "FastAPI", "Postgres"],
     accent: "pink",
+    preview: {
+      type: "code",
+      title: "integrations/hubspot.py",
+      lines: [
+        { kind: "kw", text: "from fastapi import APIRouter" },
+        { kind: "kw", text: "from .base import normalize_contact" },
+        { text: "" },
+        { kind: "kw", text: "router = APIRouter(prefix=\"/hubspot\")" },
+        { text: "" },
+        { kind: "out", text: "@router.post(\"/sync\")" },
+        { kind: "out", text: "async def sync(payload: HubspotEvent):" },
+        { kind: "dim", text: "    contact = normalize_contact(payload)" },
+        { kind: "ok", text: "    await db.contacts.upsert(contact)" },
+      ],
+    },
   },
   {
     title: "Your repetitive task",
