@@ -60,10 +60,14 @@ export function Projects() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p, i) => (
+          {projects.map((p, i) => {
+            const isExternal = p.href?.startsWith("http") ?? false;
+            return (
             <a
               key={p.title}
               href={p.href ?? "#"}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noreferrer noopener" : undefined}
               className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
             >
               <div
@@ -101,18 +105,27 @@ export function Projects() {
                 </div>
               )}
 
-              <div className="relative mt-auto pt-6 flex flex-wrap gap-1.5">
-                {p.stack.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-full border border-white/10 bg-black/30 px-2.5 py-1 text-xs text-white/70"
-                  >
-                    {t}
+              <div className="relative mt-auto pt-6 flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap gap-1.5">
+                  {p.stack.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-white/10 bg-black/30 px-2.5 py-1 text-xs text-white/70"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                {isExternal && (
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-white/60 transition group-hover:text-white">
+                    Open
+                    <span aria-hidden>↗</span>
                   </span>
-                ))}
+                )}
               </div>
             </a>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
