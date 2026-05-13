@@ -11,18 +11,21 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "Roberto Llanos",
-    "AI products",
+    "beto-llanos",
+    "indie builder",
+    "AI agents",
     "Mexico City",
-    "startup founder",
-    "AI engineer",
-    "indie hacker",
+    "Linz",
+    "hackathons",
+    "Google Cloud",
+    "startup experiments",
     "building in public",
   ],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   openGraph: {
     type: "website",
-    locale: "es_MX",
+    locale: "en_US",
     url: site.url,
     title: site.title,
     description: site.description,
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
-    creator: "@robertollanos",
+    creator: "@betollanos",
   },
   robots: {
     index: true,
@@ -53,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body className="relative min-h-screen overflow-x-hidden bg-[var(--color-bg)] text-[var(--color-ink)] antialiased">
         {children}
       </body>

@@ -6,10 +6,10 @@ export function Experience() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-14">
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-            04 · Timeline
+            05 · Journey
           </div>
           <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl">
-            Lo que vine haciendo
+            The road so far
           </h2>
         </div>
 

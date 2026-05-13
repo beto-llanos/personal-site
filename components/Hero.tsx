@@ -1,4 +1,4 @@
-import { hero, site } from "@/lib/content";
+import { hero } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -13,24 +13,34 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-lime-400" />
             </span>
-            Disponible para nuevos proyectos · {site.location}
+            {hero.status}
           </div>
 
-          <h1 className="animate-fadeup text-balance text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-[88px]">
-            <span className="block text-white/90">{hero.greeting}.</span>
-            <span className="block text-gradient">{hero.headline}.</span>
-          </h1>
+          <div className="space-y-4">
+            <p
+              className="animate-fadeup text-lg font-medium text-[var(--color-ink-soft)] sm:text-xl"
+              style={{ animationDelay: "0.05s" }}
+            >
+              {hero.greeting}
+            </p>
+            <h1
+              className="animate-fadeup text-balance text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-[88px]"
+              style={{ animationDelay: "0.15s" }}
+            >
+              <span className="text-gradient">{hero.headline}</span>
+            </h1>
+          </div>
 
           <p
             className="max-w-2xl text-balance text-lg text-[var(--color-ink-soft)] sm:text-xl animate-fadeup"
-            style={{ animationDelay: "0.15s" }}
+            style={{ animationDelay: "0.3s" }}
           >
             {hero.subhead}
           </p>
 
           <div
             className="flex flex-wrap items-center gap-3 animate-fadeup"
-            style={{ animationDelay: "0.3s" }}
+            style={{ animationDelay: "0.45s" }}
           >
             {hero.ctas.map((c) =>
               c.variant === "primary" ? (
@@ -63,26 +73,6 @@ export function Hero() {
                 </a>
               )
             )}
-          </div>
-
-          <div
-            className="mt-8 grid w-full max-w-2xl grid-cols-3 gap-3 animate-fadeup"
-            style={{ animationDelay: "0.45s" }}
-          >
-            {hero.metrics.map((m) => (
-              <div
-                key={m.label}
-                className="glass relative overflow-hidden rounded-2xl p-4"
-              >
-                <div className="text-2xl font-black text-white sm:text-3xl">
-                  {m.value}
-                </div>
-                <div className="mt-1 text-xs text-[var(--color-ink-soft)] sm:text-sm">
-                  {m.label}
-                </div>
-                <div className="shine pointer-events-none absolute inset-0" />
-              </div>
-            ))}
           </div>
         </div>
       </div>

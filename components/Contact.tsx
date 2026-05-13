@@ -12,15 +12,15 @@ export function Contact() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-14">
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-            05 · Contact
+            06 · Contact
           </div>
           <h2 className="mt-4 text-balance text-4xl font-black leading-tight tracking-tight sm:text-6xl">
-            Hagamos algo{" "}
-            <span className="text-gradient">memorable.</span>
+            Let&apos;s build something{" "}
+            <span className="text-gradient">weird.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-ink-soft)]">
-            Estoy abierto a freelance, roles full-time selectos y colaboraciones.
-            Contame en qué andás y respondo en menos de 24h.
+            Open to collaborations, hackathons, and building weird ideas. I
+            reply within 24h.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export function Contact() {
 
         <div className="mt-14 flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 text-center">
           <div className="text-sm uppercase tracking-widest text-[var(--color-muted)]">
-            O directo
+            Or just drop a line
           </div>
           <a
             href={`mailto:${site.email}`}
@@ -65,7 +65,7 @@ export function Contact() {
             {site.email}
           </a>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            <SocialLink href={site.socials.twitter} label="Twitter" />
+            <SocialLink href={site.socials.twitter} label="Twitter / X" />
             <SocialLink href={site.socials.github} label="GitHub" />
             <SocialLink href={site.socials.linkedin} label="LinkedIn" />
           </div>

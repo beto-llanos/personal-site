@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { site } from "@/lib/content";
 
 const links = [
-  { label: "Sobre mí", href: "#about" },
-  { label: "Proyectos", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experiencia", href: "#experience" },
-  { label: "Contacto", href: "#contact" },
+  { label: "About", href: "#about" },
+  { label: "Now", href: "#now" },
+  { label: "Work", href: "#projects" },
+  { label: "Stack", href: "#skills" },
+  { label: "Journey", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function Nav() {
@@ -61,14 +62,14 @@ export function Nav() {
               href="#contact"
               className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition hover:scale-[1.02] hover:bg-white/90 md:inline-block"
             >
-              Trabaja conmigo
+              Work with me
             </a>
             <button
-              aria-label="Abrir menú"
+              aria-label="Toggle menu"
               onClick={() => setOpen((v) => !v)}
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 md:hidden"
             >
-              <span className="sr-only">Menú</span>
+              <span className="sr-only">Menu</span>
               <div className="flex flex-col gap-1">
                 <span
                   className={`h-0.5 w-4 bg-white transition ${
@@ -109,7 +110,7 @@ export function Nav() {
               onClick={() => setOpen(false)}
               className="mt-1 rounded-xl bg-white px-3 py-2 text-center text-sm font-semibold text-black"
             >
-              Trabaja conmigo
+              Work with me
             </a>
           </div>
         </div>

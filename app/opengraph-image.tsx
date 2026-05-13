@@ -53,7 +53,7 @@ export default async function OG() {
               maxWidth: 1000,
             }}
           >
-            Building AI products from Mexico City.
+            Building things on the internet until one changes my life.
           </div>
           <div style={{ fontSize: 30, opacity: 0.7, maxWidth: 900 }}>
             {site.description}

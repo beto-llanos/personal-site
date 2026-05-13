@@ -13,11 +13,10 @@ export function Skills() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-14">
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-            03 · Stack
+            04 · Stack
           </div>
           <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl">
-            Las herramientas con las que{" "}
-            <span className="text-gradient">construyo</span>
+            What I work with
           </h2>
         </div>
 

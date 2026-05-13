@@ -7,13 +7,13 @@ export function Footer() {
         <div className="flex items-center gap-2 text-sm text-[var(--color-ink-soft)]">
           <span className="inline-block h-2 w-2 rounded-full bg-gradient-to-br from-violet-500 to-pink-500" />
           <span>
-            © {new Date().getFullYear()} {site.name}. Hecho con café en{" "}
+            © {new Date().getFullYear()} {site.name}. Built with coffee in{" "}
             {site.location}.
           </span>
         </div>
         <div className="flex items-center gap-3 text-xs text-[var(--color-muted)]">
           <a href="#top" className="hover:text-white">
-            Volver arriba ↑
+            Back to top ↑
           </a>
         </div>
       </div>
