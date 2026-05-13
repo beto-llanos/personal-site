@@ -6,6 +6,10 @@ export const site = {
   url: "https://personal-site-production-b1e8.up.railway.app",
   location: "Mexico City",
   email: "rbenllanos@gmail.com",
+  // Drop a square image at public/avatar.jpg (or .png) and set this to "/avatar.jpg"
+  // to swap the gradient initials for a real photo.
+  avatar: null as string | null,
+  initials: "RL",
   socials: {
     github: "https://github.com/beto-llanos",
     linkedin: "https://linkedin.com/in/roberto-llanos-476773360/",
@@ -13,7 +17,7 @@ export const site = {
 };
 
 export const hero = {
-  status: "Open to work · Mexico City · Remote",
+  status: "Building from Mexico City · available for projects · remote",
   greeting: "Hi, I'm Roberto.",
   headline: "Building things on the internet until one changes my life.",
   subhead:

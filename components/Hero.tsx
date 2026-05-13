@@ -1,4 +1,5 @@
 import { hero } from "@/lib/content";
+import { Avatar } from "@/components/Avatar";
 
 export function Hero() {
   return (
@@ -16,20 +17,22 @@ export function Hero() {
             {hero.status}
           </div>
 
-          <div className="space-y-4">
-            <p
-              className="animate-fadeup text-lg font-medium text-[var(--color-ink-soft)] sm:text-xl"
-              style={{ animationDelay: "0.05s" }}
-            >
+          <div
+            className="flex items-center gap-4 animate-fadeup"
+            style={{ animationDelay: "0.05s" }}
+          >
+            <Avatar size={72} />
+            <p className="text-lg font-medium text-[var(--color-ink-soft)] sm:text-xl">
               {hero.greeting}
             </p>
-            <h1
-              className="animate-fadeup text-balance text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-[88px]"
-              style={{ animationDelay: "0.15s" }}
-            >
-              <span className="text-gradient">{hero.headline}</span>
-            </h1>
           </div>
+
+          <h1
+            className="animate-fadeup text-balance text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-[88px]"
+            style={{ animationDelay: "0.15s" }}
+          >
+            <span className="text-gradient">{hero.headline}</span>
+          </h1>
 
           <p
             className="max-w-2xl text-balance text-lg text-[var(--color-ink-soft)] sm:text-xl animate-fadeup"

@@ -11,8 +11,8 @@ export function About() {
                 01 · About
               </div>
               <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl">
-                {about.title}{" "}
-                <span className="text-gradient-cool">honestly.</span>
+                A bit{" "}
+                <span className="text-gradient-cool">about me.</span>
               </h2>
             </div>
           </div>

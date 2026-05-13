@@ -37,7 +37,15 @@ export function Projects() {
             </h2>
             <p className="mt-3 max-w-xl text-[var(--color-ink-soft)]">
               Personal experiments, hackathon prototypes, and AI projects I
-              ship to learn. Code lives on GitHub.
+              ship to learn.{" "}
+              <a
+                href="https://github.com/beto-llanos"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-white/80 underline decoration-white/20 underline-offset-4 transition hover:text-white hover:decoration-white/60"
+              >
+                Most experiments are public. The rest are still messy.
+              </a>
             </p>
           </div>
           <a
