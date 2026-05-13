@@ -22,6 +22,22 @@ export const hero = {
   headline: "Building things on the internet until one changes my life.",
   subhead:
     "I build automation systems that save businesses hours of manual work — from web scraping and API integrations to AI-powered workflows.",
+  recentBuilds: {
+    label: "Recently shipped",
+    items: [
+      {
+        label: "Helix",
+        href: "https://helix-tau-two.vercel.app",
+        badge: "live",
+      },
+      { label: "PulseOps", href: "https://github.com/beto-llanos/pulseops" },
+      { label: "FlairGuard", href: "https://github.com/beto-llanos/flairguard" },
+      {
+        label: "Excel Data Pipeline",
+        href: "https://github.com/beto-llanos/excel-data-pipeline",
+      },
+    ],
+  },
   ctas: [
     { label: "View projects", href: "#projects", variant: "primary" as const },
     { label: "Get in touch", href: "#contact", variant: "ghost" as const },
@@ -83,17 +99,21 @@ export type Project = {
   href?: string;
   accent: "violet" | "pink" | "orange" | "cyan" | "lime";
   preview?: PreviewData;
+  featured?: boolean;
+  badge?: string;
 };
 
 export const projects: Project[] = [
   {
     title: "Helix",
-    what: "Autonomous commerce agent that learns from prior product launches and cites that operational memory while pricing new ones. Built for the Google Cloud Rapid Agent Hackathon.",
+    what: "Autonomous commerce agent that learns from prior product launches and cites that operational memory while pricing new ones. Built for the Google Cloud Rapid Agent Hackathon (MongoDB track).",
     why: "Wanted to find out what an agent looks like when its memory is the product — not the chat.",
     stack: ["Next.js", "FastAPI", "Gemini 2.5", "MongoDB Atlas", "Shopify"],
     status: "shipped",
     href: "https://helix-tau-two.vercel.app",
     accent: "violet",
+    featured: true,
+    badge: "Live demo",
     preview: {
       type: "terminal",
       title: "mission · live trace",

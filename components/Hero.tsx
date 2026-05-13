@@ -42,8 +42,43 @@ export function Hero() {
           </p>
 
           <div
+            className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm animate-fadeup"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <span className="font-mono text-[11px] uppercase tracking-widest text-[var(--color-muted)]">
+              {hero.recentBuilds.label} ·
+            </span>
+            {hero.recentBuilds.items.map((b, i) => (
+              <span key={b.label} className="flex items-center gap-x-3">
+                <a
+                  href={b.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="group inline-flex items-center gap-1.5 text-white/85 transition hover:text-white"
+                >
+                  <span className="border-b border-white/20 transition group-hover:border-white/60">
+                    {b.label}
+                  </span>
+                  {b.badge && (
+                    <span className="inline-flex items-center gap-1 rounded-full bg-lime-400/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-lime-300">
+                      <span className="relative flex h-1.5 w-1.5">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-75" />
+                        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-lime-400" />
+                      </span>
+                      {b.badge}
+                    </span>
+                  )}
+                </a>
+                {i < hero.recentBuilds.items.length - 1 && (
+                  <span className="text-white/20">·</span>
+                )}
+              </span>
+            ))}
+          </div>
+
+          <div
             className="flex flex-wrap items-center gap-3 animate-fadeup"
-            style={{ animationDelay: "0.45s" }}
+            style={{ animationDelay: "0.5s" }}
           >
             {hero.ctas.map((c) =>
               c.variant === "primary" ? (
