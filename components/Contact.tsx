@@ -65,9 +65,8 @@ export function Contact() {
             {site.email}
           </a>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            <SocialLink href={site.socials.twitter} label="Twitter / X" />
-            <SocialLink href={site.socials.github} label="GitHub" />
             <SocialLink href={site.socials.linkedin} label="LinkedIn" />
+            <SocialLink href={site.socials.github} label="GitHub" />
           </div>
         </div>
       </div>

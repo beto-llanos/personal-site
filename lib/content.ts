@@ -1,24 +1,23 @@
 export const site = {
   name: "Roberto Llanos",
-  title: "Roberto Llanos — Building things on the internet",
+  title: "Roberto Llanos — Python Automation Developer",
   description:
-    "Student & indie builder from Mexico City. Shipping AI agents, automation, and startup experiments — in public.",
+    "Python automation developer from Mexico City. I help businesses automate repetitive tasks with web scraping, API integration, and AI — and ship indie experiments on the side.",
   url: "https://personal-site-production-b1e8.up.railway.app",
   location: "Mexico City",
   email: "rbenllanos@gmail.com",
   socials: {
-    twitter: "https://twitter.com/betollanos",
     github: "https://github.com/beto-llanos",
-    linkedin: "https://linkedin.com/in/beto-llanos",
+    linkedin: "https://linkedin.com/in/roberto-llanos-476773360/",
   },
 };
 
 export const hero = {
-  status: "Open to hackathons, collabs & weird ideas · Mexico City",
+  status: "Open to work · Mexico City · Remote",
   greeting: "Hi, I'm Roberto.",
   headline: "Building things on the internet until one changes my life.",
   subhead:
-    "Student & indie builder. Shipping AI agents, automation experiments, and startup MVPs — learning in public, one prototype at a time.",
+    "Python automation developer. I help businesses automate repetitive tasks with web scraping, API integration, and data pipelines — and ship indie AI experiments on the side.",
   ctas: [
     { label: "View projects", href: "#projects", variant: "primary" as const },
     { label: "Get in touch", href: "#contact", variant: "ghost" as const },
@@ -29,16 +28,17 @@ export const hero = {
 export const about = {
   title: "About",
   body: [
-    "I'm a student and indie builder obsessed with AI agents, automation, and startup experiments. I move fast, ship rough, and learn out loud.",
-    "Right now I'm prototyping for cloud + AI hackathons, exploring what LLMs can actually do in production, and figuring out which weird idea sticks.",
+    "I'm a Python automation developer from Mexico City. My day-to-day is helping businesses save time with web scraping, API integrations, and data pipelines that just work.",
+    "On the side I'm an indie builder — shipping AI agents, hackathon prototypes, and small startup experiments. Same toolkit, different goal: figure out which weird idea sticks.",
   ],
   pills: [
+    "Python automation",
+    "Web scraping",
+    "API integration",
+    "Data pipelines",
     "AI agents",
-    "Automation",
-    "Startup experiments",
-    "Hackathons",
     "Building in public",
-    "Mexico City ↔ Linz",
+    "Mexico City",
   ],
 };
 
@@ -80,54 +80,54 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Web Scraping Toolkit",
+    what: "A collection of scrapers I've built for clients — handles JS rendering, anti-bot, retries, and clean data export.",
+    why: "Every business has data trapped in someone else's UI. I free it.",
+    stack: ["Python", "Playwright", "BeautifulSoup"],
+    status: "shipped",
+    href: "#contact",
+    accent: "violet",
+  },
+  {
+    title: "API Integration Engine",
+    what: "Reusable framework to glue together third-party APIs (CRMs, ads, payments) into a single source of truth.",
+    why: "Most 'automation' problems are really integration problems.",
+    stack: ["Python", "FastAPI", "Postgres"],
+    status: "shipped",
+    href: "#contact",
+    accent: "pink",
+  },
+  {
     title: "AI KPI Debugger",
     what: "Compares advertising metrics across platforms and surfaces reporting mismatches in real time.",
     why: "Built to understand cross-source analytics discrepancies that quietly waste ad budget.",
     stack: ["Python", "SQL", "APIs"],
     status: "building",
     href: "#contact",
-    accent: "violet",
-  },
-  {
-    title: "AI Agent Experiments",
-    what: "A series of small vertical agents that complete real tasks end-to-end.",
-    why: "Learning what LLMs can actually do in production — outside the demo bubble.",
-    stack: ["TypeScript", "OpenAI", "LangChain"],
-    status: "building",
-    href: "#contact",
-    accent: "pink",
-  },
-  {
-    title: "Personal Productivity Tracker",
-    what: "A simple system to see where my time and money actually go each week.",
-    why: "I needed it for myself. Turns out a lot of people do.",
-    stack: ["Next.js", "Postgres", "Tailwind"],
-    status: "shipped",
-    href: "#contact",
     accent: "orange",
   },
   {
-    title: "Google Cloud Hackathon Build",
-    what: "AI + cloud-native prototype currently in development for the upcoming Google Cloud hackathon.",
-    why: "Pressure-test what I can ship in a weekend with real infra.",
-    stack: ["Google Cloud", "AI"],
+    title: "AI Agent Experiments",
+    what: "Small vertical agents that complete real tasks end-to-end — research, data entry, follow-ups.",
+    why: "Learning what LLMs can actually do in production, outside the demo bubble.",
+    stack: ["Python", "OpenAI", "LangChain"],
     status: "building",
     href: "#contact",
     accent: "cyan",
   },
   {
-    title: "Startup MVP — TBA",
-    what: "Early concept exploring how small teams use AI to replace internal busywork.",
-    why: "Validating the problem with real users before writing the second line of code.",
-    stack: ["Research", "Prototype"],
-    status: "concept",
+    title: "Hackathon Build — Google Cloud",
+    what: "AI + cloud-native prototype currently in development for the upcoming Google Cloud hackathon.",
+    why: "Pressure-test what I can ship in a weekend with real infra.",
+    stack: ["Google Cloud", "Python", "AI"],
+    status: "building",
     href: "#contact",
     accent: "lime",
   },
   {
-    title: "Your next weird idea",
-    what: "Got a hackathon, a prototype, or a half-baked concept? Let's build it.",
-    why: "Most of the best stuff I've made started as a DM.",
+    title: "Your repetitive task",
+    what: "Got a manual workflow that eats hours every week? Let's automate it.",
+    why: "Most of my best work started as someone saying 'I do this every day and it's killing me.'",
     stack: ["Open"],
     status: "concept",
     href: "#contact",
@@ -137,36 +137,32 @@ export const projects: Project[] = [
 
 export const skills = [
   {
-    group: "Tech",
+    group: "Automation",
     items: [
       "Python",
-      "JavaScript / TypeScript",
-      "React & Next.js",
-      "APIs",
-      "SQL",
-      "Google Cloud",
+      "Web scraping",
+      "API integration",
+      "Data pipelines",
+      "Workflow automation",
+      "ETL",
     ],
   },
   {
     group: "AI & Tooling",
-    items: ["OpenAI", "LangChain", "Agents", "Prompt eval", "Automation"],
+    items: ["OpenAI", "LangChain", "Agents", "Prompt eval", "RAG"],
   },
   {
-    group: "Building",
-    items: [
-      "Product thinking",
-      "Rapid prototyping",
-      "Building in public",
-      "Hackathon execution",
-    ],
+    group: "Engineering",
+    items: ["FastAPI", "Postgres", "SQL", "Next.js", "TypeScript", "Git"],
   },
   {
-    group: "Business",
+    group: "Cloud & Infra",
     items: [
-      "Growth experiments",
-      "Data analysis",
-      "User research",
-      "Startup validation",
+      "Google Cloud",
+      "Railway",
+      "Docker basics",
+      "Linux",
+      "CI/CD",
     ],
   },
 ];
@@ -205,38 +201,38 @@ export const experience = [
 export const goal = {
   eyebrow: "The long game",
   quote:
-    "Building a company that solves real problems and gives me the freedom to live between Mexico City and Linz.",
+    "Build a company that solves real problems and gives me the freedom to work from anywhere.",
   attribution: "— Current obsession",
 };
 
 export const ctaBlocks = [
   {
-    eyebrow: "Hackathons",
-    title: "Need a co-builder?",
-    body: "If you're entering a hackathon and need someone fast on AI, automation, or full-stack — let's team up.",
+    eyebrow: "Automation work",
+    title: "Repetitive task eating your week?",
+    body: "I help businesses automate scraping, integrations, and data pipelines. Available for short sprints or ongoing retainers — remote, from CDMX.",
     cta: {
-      label: "Team up",
-      href: "mailto:rbenllanos@gmail.com?subject=Hackathon%20teammate",
+      label: "Get a quote",
+      href: "mailto:rbenllanos@gmail.com?subject=Automation%20project",
     },
     accent: "violet" as const,
   },
   {
-    eyebrow: "Freelance & builds",
-    title: "Have an AI idea to ship?",
-    body: "I help founders go from prototype to production fast. Available for short sprints or longer collabs.",
+    eyebrow: "Full-time roles",
+    title: "Hiring a Python / automation engineer?",
+    body: "Open to full-time, remote-first roles where I can ship automations and grow into AI engineering. Mexico City based.",
     cta: {
-      label: "Start a project",
-      href: "mailto:rbenllanos@gmail.com?subject=Project",
+      label: "See my resume",
+      href: "/resume.pdf",
     },
     accent: "pink" as const,
   },
   {
-    eyebrow: "Just say hi",
-    title: "Want to chat?",
-    body: "AI, startups, weird internet ideas, or coffee in CDMX — I'm always open to good conversations.",
+    eyebrow: "Hackathons & collabs",
+    title: "Building something weird?",
+    body: "Hackathons, indie experiments, AI prototypes — I'm always up for a build session. Especially anything Google Cloud or LLM-related.",
     cta: {
-      label: "Say hi",
-      href: "mailto:rbenllanos@gmail.com?subject=Hi",
+      label: "Team up",
+      href: "mailto:rbenllanos@gmail.com?subject=Hackathon%20teammate",
     },
     accent: "orange" as const,
   },

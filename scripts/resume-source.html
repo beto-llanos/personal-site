@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Roberto Llanos — Resume</title>
+    <style>
+      @page {
+        size: Letter;
+        margin: 0.55in 0.7in;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        color: #111827;
+        font-size: 10.5pt;
+        line-height: 1.45;
+      }
+      .wrap { max-width: 7.4in; margin: 0 auto; }
+
+      header {
+        border-bottom: 2px solid #111827;
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 18px;
+      }
+      h1 {
+        font-size: 22pt;
+        margin: 0 0 2px 0;
+        letter-spacing: -0.5px;
+        font-weight: 800;
+      }
+      .role {
+        font-size: 11.5pt;
+        color: #6d28d9;
+        font-weight: 600;
+      }
+      .meta {
+        text-align: right;
+        font-size: 9.5pt;
+        color: #374151;
+        line-height: 1.55;
+      }
+      .meta a { color: #374151; text-decoration: none; }
+      .meta a:hover { text-decoration: underline; }
+
+      h2 {
+        font-size: 10.5pt;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin: 18px 0 8px 0;
+        color: #6d28d9;
+        font-weight: 700;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 4px;
+      }
+      p { margin: 0 0 8px 0; }
+      ul {
+        margin: 0;
+        padding-left: 16px;
+      }
+      li { margin: 0 0 3px 0; }
+
+      .summary { color: #1f2937; }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 24px;
+      }
+      .skill-group b {
+        display: inline-block;
+        min-width: 110px;
+        color: #111827;
+      }
+      .skill-group {
+        font-size: 10pt;
+        margin-bottom: 4px;
+      }
+
+      .project {
+        margin-bottom: 9px;
+      }
+      .project .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+      }
+      .project .name {
+        font-weight: 700;
+        color: #111827;
+      }
+      .project .stack {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 8.5pt;
+        color: #6b7280;
+      }
+      .project .what {
+        color: #1f2937;
+        margin-top: 1px;
+      }
+      .project .why {
+        font-style: italic;
+        color: #6b7280;
+        margin-top: 1px;
+      }
+
+      .timeline-item {
+        margin-bottom: 9px;
+      }
+      .timeline-item .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .timeline-item .role-name {
+        font-weight: 700;
+      }
+      .timeline-item .period {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 9pt;
+        color: #6b7280;
+      }
+      .timeline-item .org {
+        color: #6b7280;
+        font-size: 9.5pt;
+        margin-bottom: 2px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 9pt;
+        color: #6b7280;
+        text-align: center;
+      }
+      .footer a { color: #6d28d9; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div>
+          <h1>Roberto Llanos</h1>
+          <div class="role">Python Automation Developer · AI Builder</div>
+        </div>
+        <div class="meta">
+          Mexico City · Open to remote<br />
+          <a href="mailto:rbenllanos@gmail.com">rbenllanos@gmail.com</a><br />
+          <a href="https://github.com/beto-llanos">github.com/beto-llanos</a><br />
+          <a href="https://linkedin.com/in/roberto-llanos-476773360/">linkedin.com/in/roberto-llanos</a>
+        </div>
+      </header>
+
+      <h2>Summary</h2>
+      <p class="summary">
+        Python automation developer focused on web scraping, API integration, and data pipelines —
+        I help businesses automate repetitive work so their teams can spend time on what actually
+        matters. Currently expanding into AI agents and LLM-powered tooling, and shipping indie
+        experiments on the side. Open to remote roles, freelance projects, and hackathon
+        collaborations.
+      </p>
+
+      <h2>Core Skills</h2>
+      <div class="grid-2">
+        <div class="skill-group"><b>Automation:</b> Python, web scraping, API integration, data pipelines, ETL, workflow automation</div>
+        <div class="skill-group"><b>AI &amp; LLMs:</b> OpenAI, LangChain, agents, prompt eval, RAG</div>
+        <div class="skill-group"><b>Engineering:</b> FastAPI, Postgres, SQL, Next.js, TypeScript, Git</div>
+        <div class="skill-group"><b>Cloud &amp; Infra:</b> Google Cloud, Railway, Docker basics, Linux, CI/CD</div>
+      </div>
+
+      <h2>Selected Projects</h2>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">Web Scraping Toolkit</span>
+          <span class="stack">Python · Playwright · BeautifulSoup</span>
+        </div>
+        <div class="what">Collection of scrapers built for clients — handles JS rendering, anti-bot, retries, and clean data export.</div>
+        <div class="why">Every business has data trapped in someone else's UI. I free it.</div>
+      </div>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">API Integration Engine</span>
+          <span class="stack">Python · FastAPI · Postgres</span>
+        </div>
+        <div class="what">Reusable framework to glue third-party APIs (CRMs, ads, payments) into a single source of truth.</div>
+        <div class="why">Most "automation" problems are really integration problems.</div>
+      </div>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">AI KPI Debugger</span>
+          <span class="stack">Python · SQL · APIs</span>
+        </div>
+        <div class="what">Compares advertising metrics across platforms and surfaces reporting mismatches in real time.</div>
+        <div class="why">Built to understand cross-source analytics discrepancies that quietly waste ad budget.</div>
+      </div>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">AI Agent Experiments</span>
+          <span class="stack">Python · OpenAI · LangChain</span>
+        </div>
+        <div class="what">Small vertical agents that complete real tasks end-to-end — research, data entry, follow-ups.</div>
+        <div class="why">Learning what LLMs can actually do in production, outside the demo bubble.</div>
+      </div>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">Google Cloud Hackathon Build</span>
+          <span class="stack">Google Cloud · Python · AI</span>
+        </div>
+        <div class="what">AI + cloud-native prototype in development for the upcoming Google Cloud hackathon.</div>
+        <div class="why">Pressure-test what I can ship in a weekend with real infra.</div>
+      </div>
+
+      <h2>Journey</h2>
+
+      <div class="timeline-item">
+        <div class="top">
+          <span class="role-name">Python Automation Developer — Freelance &amp; indie builds</span>
+          <span class="period">2026</span>
+        </div>
+        <div class="org">Mexico City · Remote</div>
+        <ul>
+          <li>Helping businesses automate repetitive work with web scraping, API integrations, and data pipelines.</li>
+          <li>Prototyping for AI + cloud hackathons (Google Cloud focus).</li>
+          <li>Shipping AI agent experiments and documenting the process publicly.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="top">
+          <span class="role-name">First revenue experiments</span>
+          <span class="period">2025</span>
+        </div>
+        <div class="org">Side bets · Self-directed</div>
+        <ul>
+          <li>Tested small products and content experiments to learn what people actually pay for.</li>
+          <li>First paid automation projects.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="top">
+          <span class="role-name">Started building online</span>
+          <span class="period">2024</span>
+        </div>
+        <div class="org">Self-taught</div>
+        <ul>
+          <li>Began shipping small tools, automations, and side projects.</li>
+          <li>Got hooked on the build-publish-learn loop.</li>
+        </ul>
+      </div>
+
+      <h2>Goal</h2>
+      <p class="summary">
+        Build a company that solves real problems and gives me the freedom to work from anywhere —
+        starting with the automations and AI tooling I'm shipping today.
+      </p>
+
+      <div class="footer">
+        Live site: <a href="https://personal-site-production-b1e8.up.railway.app">personal-site-production-b1e8.up.railway.app</a>
+      </div>
+    </div>
+  </body>
+</html>
