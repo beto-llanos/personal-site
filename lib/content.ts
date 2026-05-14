@@ -2,7 +2,7 @@ export const site = {
   name: "Roberto Llanos",
   title: "Roberto Llanos — Python Automation Developer",
   description:
-    "Python automation developer from Mexico City. I help businesses automate repetitive tasks with web scraping, API integration, and AI — and ship indie experiments on the side.",
+    "Python automation developer in Mexico City, available for remote work. I help businesses automate repetitive tasks with web scraping, API integration, data pipelines, and AI agents — and ship indie experiments like Helix and BLUEPRINT on the side.",
   url: "https://personal-site-production-b1e8.up.railway.app",
   location: "Mexico City",
   email: "rbenllanos@gmail.com",
@@ -369,6 +369,35 @@ export const experience = [
     ],
   },
 ];
+
+export const faq = {
+  eyebrow: "FAQ",
+  title: "Answers, before you ask",
+  intro:
+    "Things people usually want to know before sending the first message.",
+  items: [
+    {
+      q: "What does Roberto Llanos build?",
+      a: "Python automation systems that save businesses hours of manual work — web scraping, API integrations, data pipelines, and AI-powered workflows. On the side, I ship AI agents and hackathon prototypes.",
+    },
+    {
+      q: "Are you available for remote work?",
+      a: "Yes. I'm based in Mexico City and open to remote-first freelance sprints, ongoing retainers, or full-time roles.",
+    },
+    {
+      q: "What hackathons have you shipped to?",
+      a: "Google Cloud Rapid Agent Hackathon (MongoDB track) — built Helix, an autonomous commerce agent. NEXA Hack 2026 / HACKHAZARDS Developer Tools track — built BLUEPRINT, a tool that decodes any GitHub user's repos into a startup blueprint.",
+    },
+    {
+      q: "What stack do you work with?",
+      a: "Python and FastAPI for backends, Playwright and BeautifulSoup for web scraping, OpenAI / Anthropic / Gemini for AI work, Next.js and TypeScript on the frontend, Postgres for storage, and Google Cloud / Railway for hosting.",
+    },
+    {
+      q: "How fast do you usually reply?",
+      a: "Within 24 hours, often faster. If it's a hackathon DM, usually within an hour because I'm probably also on Discord.",
+    },
+  ],
+};
 
 export const goal = {
   eyebrow: "The long game",

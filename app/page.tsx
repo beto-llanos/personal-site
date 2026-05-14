@@ -9,6 +9,7 @@ import { Notes } from "@/components/Notes";
 import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
 import { Goal } from "@/components/Goal";
+import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -27,6 +28,7 @@ export default function Page() {
         <Skills />
         <Experience />
         <Goal />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

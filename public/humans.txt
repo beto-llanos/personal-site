@@ -1,0 +1,15 @@
+/* TEAM */
+
+Builder & maintainer: Roberto Llanos
+Site:                  https://personal-site-production-b1e8.up.railway.app
+GitHub:                https://github.com/beto-llanos
+LinkedIn:              https://linkedin.com/in/roberto-llanos-476773360/
+Location:              Mexico City — open to remote
+
+/* SITE */
+
+Last update:           2026-05
+Standards:             HTML5, CSS, JSON-LD
+Components:            Next.js 15, Tailwind CSS 4, TypeScript
+Hosting:               Railway
+Built with:            Coffee in CDMX

@@ -12,7 +12,7 @@ export function Contact() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-14">
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
-            08 · Contact
+            09 · Contact
           </div>
           <h2 className="mt-4 text-balance text-4xl font-black leading-tight tracking-tight sm:text-6xl">
             Let&apos;s build something{" "}
@@ -60,7 +60,7 @@ export function Contact() {
           })}
         </div>
 
-        <div className="mt-14 flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 text-center">
+        <address className="not-italic mt-14 flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 text-center">
           <div className="text-sm uppercase tracking-widest text-[var(--color-muted)]">
             Or just drop a line
           </div>
@@ -70,11 +70,14 @@ export function Contact() {
           >
             {site.email}
           </a>
+          <div className="text-sm text-[var(--color-muted)]">
+            {site.location} · Open to remote, worldwide
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-2">
             <SocialLink href={site.socials.linkedin} label="LinkedIn" />
             <SocialLink href={site.socials.github} label="GitHub" />
           </div>
-        </div>
+        </address>
       </div>
     </section>
   );
@@ -85,7 +88,7 @@ function SocialLink({ href, label }: { href: string; label: string }) {
     <a
       href={href}
       target="_blank"
-      rel="noreferrer noopener"
+      rel="me noreferrer noopener"
       className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur transition hover:border-white/20 hover:bg-white/10 hover:text-white"
     >
       {label}
