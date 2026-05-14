@@ -17,7 +17,7 @@ export default function Page() {
     <>
       <Background />
       <Nav />
-      <main className="relative">
+      <main id="main" className="relative">
         <Hero />
         <About />
         <Now />

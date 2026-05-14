@@ -45,53 +45,69 @@ export function ClientWork() {
         </div>
 
         <div className="space-y-3">
-          {clientWork.map((c, i) => (
-            <div
-              key={c.title}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-white/20 hover:bg-white/[0.06] sm:p-7"
-            >
-              <div
-                aria-hidden
-                className={`absolute -left-20 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-gradient-to-r ${accentMap[c.accent]} blur-3xl`}
-              />
-              <div className="relative grid gap-5 sm:grid-cols-[1fr_2fr] sm:items-start sm:gap-10">
-                <div>
-                  <div className="flex items-center gap-2 text-xs text-[var(--color-ink-soft)]">
-                    <span className={`h-2 w-2 rounded-full ${dotMap[c.accent]}`} />
-                    <span className="font-mono uppercase tracking-widest">
-                      C·{String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-xl font-bold text-white sm:text-2xl">
-                    {c.title}
-                  </h3>
-                  <div className="mt-4 flex flex-wrap gap-1.5">
-                    {c.stack.map((s) => (
-                      <span
-                        key={s}
-                        className="rounded-full border border-white/10 bg-black/30 px-2.5 py-1 text-xs text-white/70"
-                      >
-                        {s}
+          {clientWork.map((c, i) => {
+            const isCta = !c.preview;
+            const Wrapper = isCta ? "a" : "div";
+            const wrapperProps = isCta
+              ? { href: "#contact" as const }
+              : {};
+            return (
+              <Wrapper
+                key={c.title}
+                {...wrapperProps}
+                className={`group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-white/20 hover:bg-white/[0.06] sm:p-7 ${
+                  isCta ? "cursor-pointer" : ""
+                }`}
+              >
+                <div
+                  aria-hidden
+                  className={`absolute -left-20 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-gradient-to-r ${accentMap[c.accent]} blur-3xl`}
+                />
+                <div className="relative grid gap-5 sm:grid-cols-[1fr_2fr] sm:items-start sm:gap-10">
+                  <div>
+                    <div className="flex items-center gap-2 text-xs text-[var(--color-ink-soft)]">
+                      <span className={`h-2 w-2 rounded-full ${dotMap[c.accent]}`} />
+                      <span className="font-mono uppercase tracking-widest">
+                        C·{String(i + 1).padStart(2, "0")}
                       </span>
-                    ))}
+                    </div>
+                    <h3 className="mt-4 text-xl font-bold text-white sm:text-2xl">
+                      {c.title}
+                    </h3>
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {c.stack.map((s) => (
+                        <span
+                          key={s}
+                          className="rounded-full border border-white/10 bg-black/30 px-2.5 py-1 text-xs text-white/70"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-3">
+                    <p className="text-[15px] leading-relaxed text-[var(--color-ink-soft)]">
+                      {c.what}
+                    </p>
+                    <p className="rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white/80">
+                      <span className="mr-2 font-mono text-[10px] uppercase tracking-widest text-white/40">
+                        Outcome
+                      </span>
+                      {c.outcome}
+                    </p>
+                    {c.preview && <Preview data={c.preview} />}
+                    {isCta && (
+                      <span className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-white/80 transition group-hover:text-white">
+                        Start the conversation
+                        <span aria-hidden>→</span>
+                      </span>
+                    )}
                   </div>
                 </div>
-
-                <div className="flex flex-col gap-3">
-                  <p className="text-[15px] leading-relaxed text-[var(--color-ink-soft)]">
-                    {c.what}
-                  </p>
-                  <p className="rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white/80">
-                    <span className="mr-2 font-mono text-[10px] uppercase tracking-widest text-white/40">
-                      Outcome
-                    </span>
-                    {c.outcome}
-                  </p>
-                  {c.preview && <Preview data={c.preview} />}
-                </div>
-              </div>
-            </div>
-          ))}
+              </Wrapper>
+            );
+          })}
         </div>
       </div>
     </section>

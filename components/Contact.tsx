@@ -25,33 +25,39 @@ export function Contact() {
         </div>
 
         <div className="grid gap-4 lg:grid-cols-3">
-          {ctaBlocks.map((c) => (
-            <div
-              key={c.title}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition hover:border-white/20"
-            >
+          {ctaBlocks.map((c) => {
+            const isExternal =
+              c.cta.href.startsWith("http") || c.cta.href.endsWith(".pdf");
+            return (
               <div
-                aria-hidden
-                className={`absolute -bottom-32 -right-20 h-64 w-64 rounded-full bg-gradient-to-br ${gradientMap[c.accent]} opacity-25 blur-3xl transition group-hover:opacity-40`}
-              />
-              <div className="relative text-xs font-semibold uppercase tracking-widest text-white/60">
-                {c.eyebrow}
-              </div>
-              <h3 className="relative mt-3 text-2xl font-bold text-white">
-                {c.title}
-              </h3>
-              <p className="relative mt-3 flex-1 text-sm text-[var(--color-ink-soft)]">
-                {c.body}
-              </p>
-              <a
-                href={c.cta.href}
-                className="relative mt-6 inline-flex items-center gap-2 self-start rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:scale-[1.02]"
+                key={c.title}
+                className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition hover:border-white/20"
               >
-                {c.cta.label}
-                <span aria-hidden>→</span>
-              </a>
-            </div>
-          ))}
+                <div
+                  aria-hidden
+                  className={`absolute -bottom-32 -right-20 h-64 w-64 rounded-full bg-gradient-to-br ${gradientMap[c.accent]} opacity-25 blur-3xl transition group-hover:opacity-40`}
+                />
+                <div className="relative text-xs font-semibold uppercase tracking-widest text-white/60">
+                  {c.eyebrow}
+                </div>
+                <h3 className="relative mt-3 text-2xl font-bold text-white">
+                  {c.title}
+                </h3>
+                <p className="relative mt-3 flex-1 text-sm text-[var(--color-ink-soft)]">
+                  {c.body}
+                </p>
+                <a
+                  href={c.cta.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noreferrer noopener" : undefined}
+                  className="relative mt-6 inline-flex items-center gap-2 self-start rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:scale-[1.02]"
+                >
+                  {c.cta.label}
+                  <span aria-hidden>{isExternal ? "↗" : "→"}</span>
+                </a>
+              </div>
+            );
+          })}
         </div>
 
         <div className="mt-14 flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 text-center">

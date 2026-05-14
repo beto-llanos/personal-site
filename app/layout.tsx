@@ -12,17 +12,20 @@ export const metadata: Metadata = {
   keywords: [
     "Roberto Llanos",
     "beto-llanos",
-    "indie builder",
+    "Python automation",
+    "web scraping",
+    "API integration",
     "AI agents",
     "Mexico City",
-    "Linz",
-    "hackathons",
     "Google Cloud",
-    "startup experiments",
+    "hackathons",
     "building in public",
   ],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
+  alternates: {
+    canonical: site.url,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,7 +38,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
-    creator: "@betollanos",
   },
   robots: {
     index: true,
@@ -50,6 +52,29 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  url: site.url,
+  email: `mailto:${site.email}`,
+  jobTitle: "Python Automation Developer",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: site.location,
+    addressCountry: "MX",
+  },
+  sameAs: [site.socials.github, site.socials.linkedin],
+  knowsAbout: [
+    "Python automation",
+    "Web scraping",
+    "API integration",
+    "Data pipelines",
+    "AI agents",
+    "LLM applications",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -58,7 +83,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="relative min-h-screen overflow-x-hidden bg-[var(--color-bg)] text-[var(--color-ink)] antialiased">
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

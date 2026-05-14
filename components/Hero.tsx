@@ -80,11 +80,20 @@ export function Hero() {
             className="flex flex-wrap items-center gap-3 animate-fadeup"
             style={{ animationDelay: "0.5s" }}
           >
-            {hero.ctas.map((c) =>
-              c.variant === "primary" ? (
+            {hero.ctas.map((c) => {
+              const isExternal =
+                c.href.startsWith("http") || c.href.endsWith(".pdf");
+              const targetProps = isExternal
+                ? {
+                    target: "_blank" as const,
+                    rel: "noreferrer noopener" as const,
+                  }
+                : {};
+              return c.variant === "primary" ? (
                 <a
                   key={c.label}
                   href={c.href}
+                  {...targetProps}
                   className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 via-pink-500 to-orange-400 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_40px_-10px_rgba(236,72,153,0.6)] transition hover:scale-[1.02]"
                 >
                   <span className="relative">{c.label}</span>
@@ -105,12 +114,18 @@ export function Hero() {
                 <a
                   key={c.label}
                   href={c.href}
+                  {...targetProps}
                   className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
                 >
                   {c.label}
+                  {isExternal && (
+                    <span aria-hidden className="text-white/50">
+                      ↗
+                    </span>
+                  )}
                 </a>
-              )
-            )}
+              );
+            })}
           </div>
         </div>
       </div>

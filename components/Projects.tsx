@@ -70,7 +70,7 @@ export function Projects() {
               rel={isExternal ? "noreferrer noopener" : undefined}
               className={`group relative flex flex-col overflow-hidden rounded-3xl border bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:bg-white/[0.06] ${
                 p.featured
-                  ? "border-white/20 hover:border-white/40 lg:col-span-2 lg:p-8"
+                  ? "border-white/20 hover:border-white/40 sm:col-span-2 lg:col-span-2 lg:p-8"
                   : "border-white/10 hover:border-white/20"
               }`}
             >
