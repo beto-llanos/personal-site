@@ -19,8 +19,8 @@ export function Contact() {
             <span className="text-gradient">weird.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-ink-soft)]">
-            Open to collaborations, hackathons, and building weird ideas. I
-            reply within 24h.
+            Open to collaborations, hackathons, and building weird ideas.
+            Usually reply within a day — faster if the idea is interesting.
           </p>
         </div>
 

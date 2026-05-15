@@ -12,7 +12,7 @@ export function About() {
               </div>
               <h2 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl">
                 A bit{" "}
-                <span className="text-gradient-cool">about me.</span>
+                <span className="text-gradient-cool">about me</span>
               </h2>
             </div>
           </div>

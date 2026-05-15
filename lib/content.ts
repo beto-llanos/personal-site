@@ -23,7 +23,7 @@ export const hero = {
   subhead:
     "I build automation systems that save businesses hours of manual work — from web scraping and API integrations to AI-powered workflows.",
   recentBuilds: {
-    label: "Recently shipped",
+    label: "4 public builds shipped in 2026",
     items: [
       {
         label: "Helix",
