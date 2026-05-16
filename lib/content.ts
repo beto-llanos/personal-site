@@ -84,23 +84,23 @@ export const now = {
     "Snapshot of where my attention goes this week. Updated when reality changes.",
   items: [
     {
-      label: "Shipping",
-      text: "An AI-first prototype for the Google Cloud hackathon.",
+      label: "Just shipped",
+      text: "Helix → Google Cloud Rapid Agent Hackathon and BLUEPRINT → HACKHAZARDS. Both with demo videos.",
+    },
+    {
+      label: "Iterating",
+      text: "FLOW AI RADAR (Telegram opportunity bot) is running v1 in production. PulseOps gets the next push.",
     },
     {
       label: "Learning",
       text: "Cloud infra, agent eval loops, and faster prototyping pipelines.",
     },
     {
-      label: "Documenting",
-      text: "Building in public — every experiment, win, and dumb idea.",
-    },
-    {
-      label: "Exploring",
-      text: "Startup concepts at the intersection of AI + real workflows.",
+      label: "Deciding",
+      text: "Which of the recent builds is worth pushing as a real product — FLOW AI RADAR is the strongest candidate.",
     },
   ],
-  lastUpdated: "May 2026",
+  lastUpdated: "May 14, 2026",
 };
 
 import type { PreviewData } from "@/components/Preview";

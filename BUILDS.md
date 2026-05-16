@@ -6,6 +6,16 @@
 
 ---
 
+## Recent milestones
+
+- **2026-05-14** — Release day. Closed **4 things** in one day:
+  - **Helix** — hackathon submission delivered to Google Cloud Rapid Agent Hackathon (MongoDB track) with demo video.
+  - **BLUEPRINT** — hackathon submission delivered to HACKHAZARDS / NEXA Hack 2026 (Developer Tools track) with demo video.
+  - **FLOW AI RADAR** — v1 finished and running in production (Telegram opportunity bot).
+  - **Personal landing site** — shipped (this site).
+
+---
+
 ## How to read this
 
 - **Status**: `shipped` (live or done) · `building` (in progress) · `archived` (deprecated or paused)
@@ -17,7 +27,7 @@
 ## 1. Products & personal builds
 
 ### Helix
-- Status: **shipped** · Live demo: <https://helix-tau-two.vercel.app>
+- Status: **shipped** · Live demo: <https://helix-tau-two.vercel.app> · **hackathon submission + video delivered 2026-05-14**
 - Type: hackathon · product
 - Repo: <https://github.com/beto-llanos/helix>
 - Stack: Next.js · FastAPI · Gemini 2.5 · MongoDB Atlas Vector Search · Shopify Admin API
@@ -27,7 +37,7 @@
 - Signal: most ambitious build to date. Demonstrates AI agents in production, vector search, multi-tool orchestration, streaming UI.
 
 ### BLUEPRINT
-- Status: **shipped** · Live demo: <https://blueprint-production-50d0.up.railway.app>
+- Status: **shipped** · Live demo: <https://blueprint-production-50d0.up.railway.app> · **hackathon submission + video delivered 2026-05-14**
 - Type: hackathon · product
 - Repo: <https://github.com/beto-llanos/blueprint>
 - Stack: Next.js 16 · Claude Sonnet 4.6 (structured outputs + prompt caching) · next/og · framer-motion · Railway
@@ -38,7 +48,7 @@
 - Signal: full editorial product, structured-output AI, share-mechanics built in.
 
 ### FLOW AI RADAR
-- Status: **shipped** · in daily use
+- Status: **shipped** · v1 finished 2026-05-14 · in daily use
 - Type: internal tool
 - Stack: Python · Telegram Bot API · scraping
 - What: bot that scrapes hackathons, potential clients on Reddit + GitHub, cloud problem reports, and cloud tools, and DMs me the relevant ones on Telegram.
