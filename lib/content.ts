@@ -61,6 +61,16 @@ export const about = {
     "Building in public",
     "Mexico City",
   ],
+  recognition: [
+    {
+      label: "Top 2 freelance dev in Mexico · Workana",
+      detail: "Top 60 globally · programming",
+    },
+    {
+      label: "Top 15 · Talent Land 2026",
+      detail: "Banco Azteca hackathon track",
+    },
+  ],
 };
 
 export const now = {

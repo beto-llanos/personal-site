@@ -36,6 +36,23 @@ export function About() {
                 </span>
               ))}
             </div>
+
+            <div className="mt-10 space-y-2">
+              <div className="font-mono text-[10px] uppercase tracking-widest text-[var(--color-muted)]">
+                Recognition
+              </div>
+              {about.recognition.map((r) => (
+                <div
+                  key={r.label}
+                  className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm"
+                >
+                  <span className="font-semibold text-white">{r.label}</span>
+                  <span className="text-[var(--color-ink-soft)]">
+                    · {r.detail}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
