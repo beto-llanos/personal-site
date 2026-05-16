@@ -53,6 +53,20 @@ export function About() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-8">
+              <a
+                href={about.archive.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-white"
+              >
+                <span className="border-b border-white/20 transition group-hover:border-white/60">
+                  {about.archive.label}
+                </span>
+                <span aria-hidden>↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

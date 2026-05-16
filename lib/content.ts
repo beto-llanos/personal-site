@@ -71,6 +71,10 @@ export const about = {
       detail: "Banco Azteca hackathon track",
     },
   ],
+  archive: {
+    label: "See the full build log",
+    href: "https://github.com/beto-llanos/personal-site/blob/main/BUILDS.md",
+  },
 };
 
 export const now = {
