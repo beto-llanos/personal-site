@@ -61,7 +61,7 @@
 - Stack: Python · Claude API · webapp
 - What: continuously scans Workana for projects that match my profile, drafts the full proposal with Claude, and pre-fills the other required fields (skills, price, time estimate, attachments).
 - Why: writing proposals one-by-one was the bottleneck holding back lead conversion.
-- Signal: explains how I climbed to Top 2 MX on Workana. Could be productized for other freelancers.
+- Signal: explains how I reached Platinum with 5.0★ on Workana. Could be productized for other freelancers.
 
 ### PulseOps
 - Status: **building**
@@ -157,7 +157,7 @@
 
 ## 4. Recognition
 
-- **Workana — Top 2 freelance programmer in Mexico** · **Top 60 globally** (programming category). Currently. Active profile, real ranking.
+- **Workana — Platinum level · 5.0★ · 0 missed deliveries** (~2 years active, e-commerce integrations specialty). Verified on-profile data.
 - **Talent Land 2026** — top 15 in Banco Azteca track.
 - **Hackathons shipped in 2026**: 2 entries with live demos (Helix, BLUEPRINT) and 1 with a finished prototype (aldia).
 
