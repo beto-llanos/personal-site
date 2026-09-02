@@ -6,7 +6,7 @@
     <style>
       @page {
         size: Letter;
-        margin: 0.55in 0.7in;
+        margin: 0.5in 0.65in;
       }
       * { box-sizing: border-box; }
       html, body {
@@ -14,15 +14,15 @@
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
         color: #111827;
-        font-size: 10.5pt;
-        line-height: 1.45;
+        font-size: 10pt;
+        line-height: 1.38;
       }
       .wrap { max-width: 7.4in; margin: 0 auto; }
 
       header {
         border-bottom: 2px solid #111827;
-        padding-bottom: 12px;
-        margin-bottom: 18px;
+        padding-bottom: 10px;
+        margin-bottom: 14px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -52,7 +52,7 @@
         font-size: 10.5pt;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-        margin: 18px 0 8px 0;
+        margin: 14px 0 7px 0;
         color: #6d28d9;
         font-weight: 700;
         border-bottom: 1px solid #e5e7eb;
@@ -83,7 +83,8 @@
       }
 
       .project {
-        margin-bottom: 9px;
+        margin-bottom: 7px;
+        break-inside: avoid;
       }
       .project .top {
         display: flex;
@@ -112,6 +113,7 @@
 
       .timeline-item {
         margin-bottom: 9px;
+        break-inside: avoid;
       }
       .timeline-item .top {
         display: flex;
@@ -161,20 +163,31 @@
       <h2>Summary</h2>
       <p class="summary">
         I build automation systems that save businesses hours of manual work — from web scraping
-        and API integrations to AI-powered workflows. Day-to-day I work in Python and FastAPI;
-        on the side I'm shipping AI agent experiments and hackathon prototypes to grow into
-        AI engineering. Open to remote roles, freelance projects, and hackathon collaborations.
+        and API integrations to AI agents in production. Platinum freelancer on Workana (5.0★,
+        zero missed deliveries) specialized in e-commerce integrations. In 2026 I shipped 10+
+        live products solo, including two with real paying customers. Open to remote roles,
+        freelance projects, and hackathon collaborations.
       </p>
 
       <h2>Core Skills</h2>
       <div class="grid-2">
-        <div class="skill-group"><b>Automation:</b> Python, web scraping, API integration, data pipelines, ETL, workflow automation</div>
-        <div class="skill-group"><b>AI &amp; LLMs:</b> OpenAI, LangChain, agents, prompt eval, RAG</div>
-        <div class="skill-group"><b>Engineering:</b> FastAPI, Postgres, SQL, Next.js, TypeScript, Git</div>
-        <div class="skill-group"><b>Cloud &amp; Infra:</b> Google Cloud, Railway, Docker basics, Linux, CI/CD</div>
+        <div class="skill-group"><b>Automation:</b> Python, web scraping (Playwright, BeautifulSoup), API integration, data pipelines, ETL, Telegram bots</div>
+        <div class="skill-group"><b>AI &amp; LLMs:</b> Claude API, OpenAI, agent pipelines, RAG, vector search, structured outputs</div>
+        <div class="skill-group"><b>Engineering:</b> FastAPI, Postgres, SQL, Next.js, TypeScript, Stripe, Git</div>
+        <div class="skill-group"><b>Cloud &amp; Infra:</b> Railway, Google Cloud, Docker basics, Linux, CI/CD</div>
+        <div class="skill-group"><b>Languages:</b> Spanish (native), English (fluent)</div>
       </div>
 
       <h2>Client Work</h2>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">E-commerce platform integrations</span>
+          <span class="stack">Mercado Libre · Shopify · Bsale · JumpSeller APIs</span>
+        </div>
+        <div class="what">Catalog and stock sync, sales dashboards, and ticket automation for e-commerce sellers. Example: a seller running 4 Mercado Libre accounts from Excel → fully automated (5★ review and a referral).</div>
+        <div class="why">Workana Platinum · 5.0★ · 0 missed deliveries · ~2 years active.</div>
+      </div>
 
       <div class="project">
         <div class="top">
@@ -194,7 +207,7 @@
         <div class="why">Outcome: stop juggling 4 dashboards. One source of truth, updated automatically.</div>
       </div>
 
-      <h2>Personal Projects</h2>
+      <h2>Selected Products (all live)</h2>
 
       <div class="project">
         <div class="top">
@@ -207,39 +220,55 @@
 
       <div class="project">
         <div class="top">
+          <span class="name">CLOSER · closer-production-e0e3.up.railway.app</span>
+          <span class="stack">Next.js 16 · React 19 · Claude Sonnet 4.6 · SSE</span>
+        </div>
+        <div class="what">Intent-first AI SDR: a 4-agent pipeline (Prospector → Qualifier → Researcher → Outreach) scans HackerNews, Reddit and Stack Exchange for public buying-intent posts, qualifies fit, and writes a personalized first outreach message — streamed live to the browser.</div>
+        <div class="why">Signal-based selling vs. cold-spam lists. Built for the International AI Agents Hackathon.</div>
+      </div>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">Leads MX &amp; LocalGrowth · leads and local-business SaaS</span>
+          <span class="stack">Python · Next.js · Stripe · Railway</span>
+        </div>
+        <div class="what">Two self-serve products with live Stripe billing: Leads MX sells curated business-lead datasets for Mexico (first paying customers, Aug 2026); LocalGrowth (localgrowth.work) productizes local-business digitalization — landing, CRM, and subscription plans.</div>
+        <div class="why">First products with real revenue — built, priced, and sold end to end.</div>
+      </div>
+
+      <div class="project">
+        <div class="top">
+          <span class="name">AIONIS · aionis-production.up.railway.app</span>
+          <span class="stack">Next.js · Supabase · Claude Sonnet 4.6 · react-flow</span>
+        </div>
+        <div class="what">Anti-chatbot Socratic STEM tutor: never gives the answer. Guides you to reconstruct a concept from first principles over a dependency graph and pinpoints exactly where your understanding breaks.</div>
+        <div class="why">Built solo in 23 days for DSH Hacks V1 (AI × STEM education).</div>
+      </div>
+
+      <div class="project">
+        <div class="top">
           <span class="name">BLUEPRINT · blueprint-production-50d0.up.railway.app</span>
           <span class="stack">Next.js 16 · Claude Sonnet 4.6 · next/og · Railway</span>
         </div>
-        <div class="what">Decodes any GitHub username into an archetype, builder score, signature pattern, and a real next-startup idea — with a unique Open Graph card per report so shared links render as designed objects.</div>
-        <div class="why">Built solo for NEXA Hack 2026 / HACKHAZARDS, Developer Tools track. Two-month buildathon.</div>
+        <div class="what">Decodes any GitHub username into an archetype, builder score, signature pattern, and a real next-startup idea — with a unique Open Graph card per report.</div>
+        <div class="why">Built solo for NEXA Hack 2026 / HACKHAZARDS, Developer Tools track.</div>
       </div>
 
       <div class="project">
         <div class="top">
-          <span class="name">PulseOps · github.com/beto-llanos/pulseops</span>
-          <span class="stack">Python · Streamlit · Claude API · Postgres</span>
+          <span class="name">Prompt Forensics · live on Railway</span>
+          <span class="stack">Static analysis · 14 detectors · Claude</span>
         </div>
-        <div class="what">Real-time operational intelligence: 4 detection engines (meetings, dev flow, SaaS utilization, repetition) rank a company's top 5 money drains this week by recoverable dollar cost.</div>
-        <div class="why">Most ops dashboards show vanity numbers. I wanted one that points at recoverable spend.</div>
+        <div class="what">Security scanner for production LLM prompts: 14 detectors across 8 vulnerability categories (instruction override, role hijack, secret exposure, PII, indirect injection…) with AI forensic notes per finding.</div>
+        <div class="why">Security × AI angle. Shipped in one afternoon for UOE Summer of Code 2026.</div>
       </div>
 
-      <div class="project">
-        <div class="top">
-          <span class="name">FlairGuard · Reddit Devvit App</span>
-          <span class="stack">TypeScript · Reddit Devvit</span>
-        </div>
-        <div class="what">One-click post removal with wiki-configured reason templates for Reddit mods. Native port of the classic Taskerbot to Devvit — no server to host, 100% wiki-format compatible.</div>
-        <div class="why">Taskerbot solved this with PRAW years ago, then bitrot. Devvit makes it native and free to run.</div>
-      </div>
-
-      <div class="project">
-        <div class="top">
-          <span class="name">Excel Data Pipeline · github.com/beto-llanos/excel-data-pipeline</span>
-          <span class="stack">Python · pandas · openpyxl</span>
-        </div>
-        <div class="what">Ingests multiple Excel files, auto-detects key columns (qty, price, product), cleans the data, and exports a multi-sheet report.</div>
-        <div class="why">The boring automation businesses actually need — surfaced as portfolio, not hidden.</div>
-      </div>
+      <h2>Recognition</h2>
+      <ul>
+        <li><b>Workana</b> — Platinum level, 5.0★, 0 missed deliveries across ~2 years; specialty: e-commerce integrations.</li>
+        <li><b>Talent Land México 2026</b> — top 15, Banco Azteca track (AI finance assistant).</li>
+        <li><b>2026 hackathon run</b> — 8+ entries shipped with live demos: Google Cloud, HACKHAZARDS, DSH Hacks, AlgoFest, UOE Summer of Code, DataHub Agent Hackathon, World Product Day.</li>
+      </ul>
 
       <h2>Journey</h2>
 
@@ -250,9 +279,9 @@
         </div>
         <div class="org">Mexico City · Remote</div>
         <ul>
-          <li>Helping businesses automate repetitive work with web scraping, API integrations, and data pipelines.</li>
-          <li>Prototyping for AI + cloud hackathons (Google Cloud focus).</li>
-          <li>Shipping AI agent experiments and documenting the process publicly.</li>
+          <li>10+ live products deployed solo this year — AI agents, SaaS, security tooling.</li>
+          <li>First paying customers on my own products (Leads MX, LocalGrowth).</li>
+          <li>Platinum freelancer on Workana: e-commerce integrations for real sellers.</li>
         </ul>
       </div>
 
